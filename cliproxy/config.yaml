@@ -1,0 +1,19 @@
+host: "0.0.0.0"
+port: 8317
+
+auth-dir: "/root/.cli-proxy-api"
+
+api-keys:
+  - "sk-cliproxy-default-key-123"
+
+routing:
+  strategy: "round-robin"
+
+# Tắt remote management cho bảo mật, chỉ dùng CLI login
+remote-management:
+  allow-remote: false
+  secret-key: ""
+
+debug: false
+logging-to-file: true
+usage-statistics-enabled: true

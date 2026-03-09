@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  cli-proxy-api:
+    image: eceasy/cli-proxy-api:latest
+    container_name: cli-proxy-api
+    restart: unless-stopped
+    ports:
+      - "8317:8317"
+    volumes:
+      - ./cliproxy/config.yaml:/CLIProxyAPI/config.yaml
+      - ./cliproxy/auths:/root/.cli-proxy-api
+      - ./logs:/CLIProxyAPI/logs
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
