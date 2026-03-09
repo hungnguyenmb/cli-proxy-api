@@ -9,10 +9,10 @@ api-keys:
 routing:
   strategy: "round-robin"
 
-# Tắt remote management cho bảo mật, chỉ dùng CLI login
+# Mở quản lý từ xa để truy cập Dashboard qua domain
 remote-management:
-  allow-remote: false
-  secret-key: ""
+  allow-remote: true
+  secret-key: "admin123"
 
 debug: false
 logging-to-file: true
